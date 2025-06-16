@@ -31,6 +31,7 @@
 *.out
 *.app
 */zombie
+*/fight
 
 #obj directories
 */objects

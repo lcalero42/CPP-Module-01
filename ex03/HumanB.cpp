@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 12:51:55 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/16 13:04:28 by lcalero          ###   ########.fr       */
+/*   Created: 2025/06/16 15:00:37 by lcalero           #+#    #+#             */
+/*   Updated: 2025/06/16 15:40:02 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanB.hpp"
 
-int	main(void)
+HumanB::HumanB(std::string name) : name(name) {}
+
+void	HumanB::attack(void)
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string	*stringPTR = &str;
-	std::string	&stringREF = str;
+	if (!weapon)
+		return ;
+	
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+}
 
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	std::cout << "--------------" << std::endl;
-
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
+void	HumanB::setWeapon(Weapon &weapon_input)
+{
+	weapon = &weapon_input;
 }

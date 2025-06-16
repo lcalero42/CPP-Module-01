@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 12:51:55 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/16 13:04:28 by lcalero          ###   ########.fr       */
+/*   Created: 2025/06/16 14:36:09 by lcalero           #+#    #+#             */
+/*   Updated: 2025/06/16 15:39:48 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Weapon.hpp"
 
-int	main(void)
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
+
+class HumanB
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string	*stringPTR = &str;
-	std::string	&stringREF = str;
+	public :
 
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
+	HumanB(std::string name);	
 
-	std::cout << "--------------" << std::endl;
+	void	attack(void);
+	void	setWeapon(Weapon &weapon_input);
 
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-}
+	private :
+
+	std::string name;
+	Weapon		*weapon;
+
+};
+
+#endif
