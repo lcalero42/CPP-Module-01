@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   file.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 14:36:09 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/17 11:05:19 by lcalero          ###   ########.fr       */
+/*   Created: 2025/06/17 11:12:21 by lcalero           #+#    #+#             */
+/*   Updated: 2025/06/17 15:02:42 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FILE_HPP
+# define FILE_HPP
+
+#include <iostream>
+#include <iostream>
+#include <fstream>
+#include <cstring>
 
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
-
-#include "Weapon.hpp"
-
-class HumanB
+class File
 {
-	public :
-
-	HumanB(std::string name);	
-
-	void	attack(void);
-	void	setWeapon(Weapon &weapon_input);
-
-	private :
-
-	std::string name;
-	Weapon		*weapon;
-
+	public:
+		File();
+		File(std::string name);
+		
+		std::string	getName( void );
+		
+		std::fstream	*openFile( std::ios::openmode mode );
+		std::ofstream	*createFile( void );
+	private:
+		std::string name;
 };
 
 #endif
