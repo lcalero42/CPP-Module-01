@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 11:12:21 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/17 15:02:42 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 17:07:35 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-
 
 class File
 {
