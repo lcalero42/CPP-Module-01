@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 12:52:18 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/17 17:10:02 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 17:20:17 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@
 class ReplaceTool
 {
 	public:
+	
 	//Constructor
 	ReplaceTool(File &fileToRead, std::string &s1, std::string &s2);
 
+	//main logic functions
 	File 	*initOutputFile( void );
 	void	run( File *outputFilePtr );
 	
 	private:
-	
+
 	static std::string replacePatterns(std::string &str, std::string &from, std::string &to);
 	
 	File		&inputFile;

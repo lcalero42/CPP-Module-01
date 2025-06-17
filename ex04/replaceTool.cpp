@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 12:54:48 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/17 16:39:55 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 17:23:22 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 ReplaceTool::ReplaceTool(File &fileToRead, std::string &s1, std::string &s2)
 	: inputFile(fileToRead), toReplace(s1), newPattern(s2) {}
 
+/*Initializes the output file and checks for eventual errors for opening infile
+or creating outfile*/
 File* ReplaceTool::initOutputFile(void)
 {
 	File* outputFile = NULL;
@@ -53,6 +55,8 @@ File* ReplaceTool::initOutputFile(void)
 	}
 }	
 
+/*finds the pattern we want to replace and replace it by the new pattern
+in the line we pass in parameter, the file process is done in the function below*/
 std::string	ReplaceTool::replacePatterns(std::string &str, std::string &from, std::string &to)
 {
 	std::string result;
@@ -69,6 +73,8 @@ std::string	ReplaceTool::replacePatterns(std::string &str, std::string &from, st
 	return (result);
 }
 
+/*main logic of replacing the patterns between the files is processed
+in this function*/
 void	ReplaceTool::run(File *outputFilePtr)
 {
 	std::fstream *file = NULL;
