@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 10:50:26 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/18 11:47:15 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/18 11:47:59 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ Harl::level	Harl::getLevel(std::string &str)
 
 void	Harl::complain(std::string level)
 {
-	(void)level;
-
 	void (Harl::* ptfptr) (void) = NULL;
 
 	switch (getLevel(level))
