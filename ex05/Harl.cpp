@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 10:50:26 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/18 11:43:15 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/18 11:47:15 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	Harl::complain(std::string level)
 			break;
 		default:
 			return ;
-			break;
 	}
 	(this->*ptfptr) ();
 }
